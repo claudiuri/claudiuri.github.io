@@ -29,15 +29,16 @@ body, p {
   color: slategray;
 }
 
+.intro{
+    padding-left: 30px;
+  }
+
 .projetos {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
 }
 
-.intro{
- padding-left: 0px;
-}
 .projeto{
   height: 160px; 
   display: flex;
@@ -132,14 +133,25 @@ textarea{
   .projeto {
     flex: 1 200px;
   }
+
+  
+
 }
 
 @media (min-width: 960px) {
   body{
    overflow-y: hidden;
   }
+  .intro{
+    margin-left: 5px;
+  }
+  .intro{
+    padding-left: 0px;
+  }
+
   .intro h2 {
     font-size: 2em;
+     margin-left: 10px;
   }
   .projeto {
     flex: 1 150px;
