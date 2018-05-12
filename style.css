@@ -1,0 +1,168 @@
+body{
+	width: 100%;
+	align-items: center;
+	line-height: 1.25;
+	font-family: 'Hind', sans-serif;
+	display: flex;
+	flex-direction: column;
+}
+
+body, p {
+  margin: 0;
+  padding: 0;
+}
+#form{
+  color: slategray;
+}
+.container{
+	margin: 3em auto;
+	max-width: 960px;
+}
+
+.container, .intro, footer{
+	padding: 0 1em;
+}
+
+.intro h2 {
+  font-weight: 300;
+  font-size: 1.5em;
+  color: slategray;
+}
+
+.projetos {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.intro{
+ padding-left: 0px;
+}
+.projeto{
+  height: 160px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1 300px;
+  padding: 2em;
+  margin: 1.2em;
+  border-radius: .5em;
+  transition: transform .5s;	
+}
+.projeto img{
+width: 4em;
+  margin-bottom: 2em;
+}
+
+.projeto a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+.projeto p {
+  font-size: 1em;
+  font-weight: 500;
+  backface-visibility: hidden;
+}
+
+.git {
+  background: #000;
+  border: 1px solid black;
+}
+
+.git a{
+	color: white;
+}
+
+.twitter{
+	background:#55acee;
+}
+
+.twitter a {
+	color: white;
+
+}
+
+.insta {
+	background: #e4405f;
+}
+
+.insta a{
+	color: white;
+}
+
+.gmail{
+	background: #d32e2a;
+}
+
+/* ========= RODAPE ==========*/
+footer {
+  margin-top: 2em;
+  margin-left: -30em;
+  color: slategray;
+}
+
+footer a {
+  text-align: left;
+  color: black;
+  text-decoration: none;
+}
+
+footer>a:hover{
+  color: black;
+  
+  text-decoration: underline;
+}
+
+footer>a:link{
+  color: slategray;
+}
+
+textarea{
+ resize: none;
+ height: 600px;
+}
+
+
+/* ========== MEDIA QUERIES=======*/
+
+@media (min-device-width: 768px) {
+  .projeto {
+    flex: 1 200px;
+  }
+}
+
+@media (min-width: 960px) {
+  body{
+   overflow-y: hidden;
+  }
+  .intro h2 {
+    font-size: 2em;
+  }
+  .projeto {
+    flex: 1 150px;
+  }
+  .projeto:hover {
+    transform: scale(1.1);
+  }
+  div::after {
+  z-index: -1;
+  content: '';
+  background: inherit;
+  opacity: 0;
+  height: 20%;
+  width: 70%;
+  position: absolute;
+  margin-left: auto; margin-right: auto; left: 0; right: 0;
+  bottom: 0;
+  filter: blur(.9em);
+  transition: opacity 1s, bottom 0.5s;
+}
+
+  div:hover::after {
+  opacity: .85;
+  bottom: -.75em;
+  }
+}
