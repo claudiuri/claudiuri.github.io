@@ -1,0 +1,31 @@
+{
+  "name": "Yuri Brandao - Desenvolvedor",
+  "short_name": "Yuri Brandao",
+  "theme_color": "#FFF8E9",
+  "background_color": "#FFF8E9",
+  "display": "standalone",
+  "start_url": "/?utm_source=homescreen",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "img/boy128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "img/boy512.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/boy256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "img/boy512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
