@@ -138,9 +138,13 @@ textarea{
 
 }
 
-@media (min-width: 960px) {
+@media(max-height: 720px ){
+  overflow-y: hidden;
+}
+
+@media (min-width: 960px) and (min-height: 715px) {
   body{
-   overflow-y: hidden;
+    overflow-y: hidden;
   }
   .intro{
     margin-left: 5px;
@@ -176,5 +180,6 @@ textarea{
   div:hover::after {
   opacity: .85;
   bottom: -.75em;
+
   }
 }
