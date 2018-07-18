@@ -1,5 +1,5 @@
-var cacheName = 'yb-v1';
-var dataCacheName = 'ybData-v1';
+var cacheName = 'yb-v2';
+var dataCacheName = 'ybData-v2';
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
@@ -7,7 +7,14 @@ self.addEventListener('install', function (event) {
       return cache.addAll([
         '/',
         '/index.html',
+        '/img/git.png',
+        '/img/twitter.png',
+        '/img/gmail.png',
+        '/img/insta.png',
+        'img/boy256.png',
         '/style.css',
+        'https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css',
+        'https://fonts.googleapis.com/css?family=Hind:300,400,500',
         '/manifest.json',
       ]);
     })
