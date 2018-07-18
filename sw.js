@@ -9,7 +9,8 @@ self.addEventListener('install', function (event) {
         '/img/git.png',
         '/img/gmail1.png',
         '/img/insta.png',
-        '/img/.png',
+        '/img/twitter.png',
+        '/img/boy256.png',
         '/styles.css',
         '/manifest.json',
       ]);
