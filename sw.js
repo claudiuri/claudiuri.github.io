@@ -1,8 +1,9 @@
-var CACHE_NAME = 'static-v1';
+var cacheName = 'yb-v1';
+var dataCacheName = 'ybData-v1';
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
-    caches.open('airhorner').then(function (cache) {
+    caches.open(cacheName).then(function (cache) {
       return cache.addAll([
         '/',
         '/index.html',
@@ -18,20 +19,24 @@ self.addEventListener('activate', function activator(event) {
     caches.keys().then(function (keys) {
       return Promise.all(keys
         .filter(function (key) {
-          return key.indexOf(CACHE_NAME) !== 0;
+          return key.indexOf(cacheName) !== 0;
         })
         .map(function (key) {
-          return caches.delete(key);
+          if (key !== cacheName && key !== dataCacheName){
+            return caches.delete(key);
+          }
         })
       );
     })
   );
 });
 
-self.addEventListener('fetch', function (event) {
-  event.respondWith(
-    caches.match(event.request).then(function (cachedResponse) {
-      return cachedResponse || fetch(event.request);
+
+self.addEventListener('fetch', function(e) {
+  console.log('[ServiceWorker] Fetch', e.request.url);
+  e.respondWith(
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
     })
   );
 });
