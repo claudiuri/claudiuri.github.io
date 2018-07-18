@@ -6,32 +6,13 @@ self.addEventListener('install', function (event) {
       return cache.addAll([
         '/',
         '/index.html',
+        '/img/git.png',
+        '/img/gmail1.png',
+        '/img/insta.png',
+        '/img/twitter.png',
         '/styles.css',
         '/manifest.json',
       ]);
     })
   )
-});
-
-self.addEventListener('activate', function activator(event) {
-  event.waitUntil(
-    caches.keys().then(function (keys) {
-      return Promise.all(keys
-        .filter(function (key) {
-          return key.indexOf(CACHE_NAME) !== 0;
-        })
-        .map(function (key) {
-          return caches.delete(key);
-        })
-      );
-    })
-  );
-});
-
-self.addEventListener('fetch', function (event) {
-  event.respondWith(
-    caches.match(event.request).then(function (cachedResponse) {
-      return cachedResponse || fetch(event.request);
-    })
-  );
 });
