@@ -47,11 +47,11 @@ body, p {
   margin: auto;
 }
 
-.projetos a{
+/* .projetos a{
   text-decoration: none;
   color: white;
   display: block;
-}
+} */
 
 .projeto{
   height: 160px; 
@@ -70,12 +70,16 @@ body, p {
 width: 4em;
   margin-bottom: 2em;
 }
-
-.projeto a {
+a{
   text-decoration: none;
   color: white;
   display: block;
 }
+/* .projeto a {
+  text-decoration: none;
+  color: white;
+  display: block;
+} */
 .projeto p {
   font-size: 1em;
   font-weight: 500;
