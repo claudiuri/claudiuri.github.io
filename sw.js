@@ -1,5 +1,5 @@
-var cacheName = 'yb-v3';
-var dataCacheName = 'ybData-v3';
+var cacheName = 'yb-v4';
+var dataCacheName = 'ybData-v4';
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
