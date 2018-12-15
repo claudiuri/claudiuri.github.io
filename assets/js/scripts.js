@@ -44,41 +44,17 @@
 //     }
 // );
 
-// $('#contactForm').submit(function(e) {
-//     // var nome    = $('#nome').val();
-//     // var email   = $('#email').val();
-//     // var mensagem = $('#mensagem').val();
-//     e.preventDefault();
-// 	$.ajax({
-// 		url: 'https://formspree.io/claudio.y07@gmail.com',
-// 		method: 'POST',
-// 		data: $(this).serialize(),
-// 		dataType: 'json',
-// 		beforeSend: function() {
-// 			console.log("Enviando");
-// 		},
-// 		success: function(data) {
-//             console.log("Eviado");
-// 		},
-// 		error: function(err) {
-//             console.log("Erro");
-// 		}
-//     });
-//     // $.post('http://formspree.io/claudio.y07@gmail.com',$(this).serialize() )
-//     //     .done(function() {
-//     //     console.log( "second success" );
+$('#contactForm').submit(function(e) {
+    // var nome    = $('#nome').val();
+    // var email   = $('#email').val();
+    // var mensagem = $('#mensagem').val();
+    e.preventDefault();
+	
+    $.post('https://formspree.io/claudio.y07@gmail.com',$(this).serialize() )
+        .done(function() {
+        console.log( "second success" );
       
-//     // });
-
-//     // $.ajax({
-//     //     method: 'POST',
-//     //     url: 'https://formspree.io/claudio.y07@gmail.com',
-//     //     data: {message: "claudio teste!"},
-//     //     datatype: 'json'
-//     // }).done(function () {
-//     //     alert("Deu certo!")
-//     // });
-   
+    });
     
-// });
+});
     
