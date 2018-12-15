@@ -56,7 +56,7 @@
                             <div class="my-auto portfolio-item-caption-content w-100 text-center text-white"><i class="fa fa-search-plus fa-3x"></i></div>
                         </div><img class="img-fluid" src="assets/img/portfolio/circus.png"></a>
                 </div>
-                <div class="col-md-6 col-lg-4">
+                <!-- <div class="col-md-6 col-lg-4">
                     <a class="d-block mx-auto portfolio-item" href="#portfolio-modal-4" data-toggle="modal">
                         <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
                             <div class="my-auto portfolio-item-caption-content w-100 text-center text-white"><i class="fa fa-search-plus fa-3x"></i></div>
@@ -73,7 +73,7 @@
                         <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
                             <div class="my-auto portfolio-item-caption-content w-100 text-center text-white"><i class="fa fa-search-plus fa-3x"></i></div>
                         </div><img class="img-fluid" src="assets/img/portfolio/submarine.png"></a>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -100,16 +100,14 @@
                 <div class="col-lg-8 mx-auto">
                     <form id="contactForm" name="sentMessage" novalidate="novalidate">
                         <div class="control-group">
-                            <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Name</label><input class="form-control" type="text" required="" placeholder="Nome" id="name"><small class="form-text text-danger help-block"></small></div>
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Nome</label><input class="form-control" type="text" required="" placeholder="Nome" id="name"><small class="form-text text-danger help-block"></small></div>
                         </div>
                         <div class="control-group">
-                            <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Email Address</label><input class="form-control" type="email" required="" placeholder="E-mail" id="email"><small class="form-text text-danger help-block"></small></div>
-                        </div>
-                        <div class="control-group">
-                            <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Phone Number</label><input class="form-control" type="tel" required="" placeholder="Telefone" id="phone"><small class="form-text text-danger help-block"></small></div>
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>E-mail</label><input class="form-control" type="email" required="" placeholder="E-mail" id="email"><small class="form-text text-danger help-block"></small></div>
                         </div>
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls mb-5 pb-2"><textarea class="form-control" rows="5" required="" placeholder="Mensagem" id="message"></textarea><small class="form-text text-danger help-block"></small></div>
+                            <input type="text" name="_gotcha" style="display: none;">
                         </div>
                         <div id="success"></div>
                         <div class="form-group"><button class="btn btn-primary btn-xl" type="submit" id="sendMessageButton">Enviar</button></div>
@@ -144,11 +142,10 @@
                 <div class="modal-body">
                     <div class="container text-center">
                         <div class="row">
-                            <div class="col-lg-8 mx-auto">
-                                <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
-                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/cabin.png">
-                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-                                    itaque. Nam.</p>
+                            <div class="col-lg-8 mx-auto" id="col-1">
+                                
+                               
+                               
                             </div>
                         </div>
                     </div>
@@ -164,11 +161,8 @@
                 <div class="modal-body">
                     <div class="container text-center">
                         <div class="row">
-                            <div class="col-lg-8 mx-auto">
-                                <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
-                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/cake.png">
-                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-                                    itaque. Nam.</p>
+                            <div class="col-lg-8 mx-auto" id="col-2">
+                               
                             </div>
                         </div>
                     </div>
@@ -184,11 +178,8 @@
                 <div class="modal-body">
                     <div class="container text-center">
                         <div class="row">
-                            <div class="col-lg-8 mx-auto">
-                                <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
-                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/circus.png">
-                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-                                    itaque. Nam.</p>
+                            <div class="col-lg-8 mx-auto" id="col-3">
+                               
                             </div>
                         </div>
                     </div>
@@ -197,66 +188,7 @@
             </div>
         </div>
     </div>
-    <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-4">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                <div class="modal-body">
-                    <div class="container text-center">
-                        <div class="row">
-                            <div class="col-lg-8 mx-auto">
-                                <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
-                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/game.png">
-                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-                                    itaque. Nam.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" href="#"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
-            </div>
-        </div>
-    </div>
-    <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-5">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                <div class="modal-body">
-                    <div class="container text-center">
-                        <div class="row">
-                            <div class="col-lg-8 mx-auto">
-                                <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
-                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/safe.png">
-                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-                                    itaque. Nam.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" href="#"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
-            </div>
-        </div>
-    </div>
-    <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-6">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                <div class="modal-body">
-                    <div class="container text-center">
-                        <div class="row">
-                            <div class="col-lg-8 mx-auto">
-                                <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
-                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/submarine.png">
-                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-                                    itaque. Nam.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" href="#"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
-            </div>
-        </div>
-    </div>
+    
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
