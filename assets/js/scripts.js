@@ -44,17 +44,4 @@
 //     }
 // );
 
-$('#contactForm').submit(function(e) {
-    // var nome    = $('#nome').val();
-    // var email   = $('#email').val();
-    // var mensagem = $('#mensagem').val();
-    e.preventDefault();
-	
-    $.post('https://formspree.io/claudio.y07@gmail.com',$(this).serialize() )
-        .done(function() {
-        console.log( "second success" );
-      
-    });
-    
-});
     
