@@ -50,7 +50,7 @@ $('#contactForm').submit(function(e) {
     // var mensagem = $('#mensagem').val();
     e.preventDefault();
 	$.ajax({
-		url: 'http://formspree.io/claudio.y07@gmail.com',
+		url: 'https://formspree.io/claudio.y07@gmail.com',
 		method: 'POST',
 		data: $(this).serialize(),
 		dataType: 'json',
