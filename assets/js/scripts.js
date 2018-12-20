@@ -8,6 +8,7 @@ $.when($.get("https://api.github.com/repos/claudioybf/calculadora") , $.get("htt
             var html = "<h2 class='text-uppercase text-secondary mb-0'>"+repositorios[i-1][0].name+"</h2>";
             html += "<hr class='star-dark mb-5'><img class='img-fluid mb-5' src='assets/img/portfolio/cabin.png'>" 
             html += "<p class='mb-5'>"+repositorios[i-1][0].description+"</p>";
+            $('.link-'+i).attr('href', repositorios[i-1][0].html_url);
 
             $('#col-'+ i).html(html);
         }
