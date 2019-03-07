@@ -1,16 +1,21 @@
-$.when($.get("https://api.github.com/repos/claudioybf/calculadora") , $.get("https://api.github.com/repos/claudioybf/explode-ballons"), $.get("https://api.github.com/repos/claudioybf/hash-game"))
-    .done(function (data1 , data2, data3) {
+var projects = [];
 
-        var repositorios =  {0: data1, 1: data2, 2: data3} ;
+$.get("https://api.github.com/users/claudiuri/repos", (data) => {
 
-        for (i = 1; i < 4; i++) { 
-            
-            var html = "<h2 class='text-uppercase text-secondary mb-0'>"+repositorios[i-1][0].name+"</h2>";
-            html += "<hr class='star-dark mb-5'><img class='img-fluid mb-5' src='assets/img/portfolio/cabin.png'>" 
-            html += "<p class='mb-5'>"+repositorios[i-1][0].description+"</p>";
-            $('.link-'+i).attr('href', repositorios[i-1][0].html_url);
+    data.forEach(element => {
+        let project = { name: element.name, description:  element.description, language: element.language}
+        projects.push(project);
+    });
 
-            $('#col-'+ i).html(html);
-        }
-    }
-);
+});
+
+projects.forEach(element => {
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = "NEW CELL1";
+    cell2.innerHTML = "NEW CELL2";
+})
+
+console.log(projects);
