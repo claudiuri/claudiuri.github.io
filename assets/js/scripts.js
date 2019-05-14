@@ -29,7 +29,7 @@ function insertProjectsInTable(projects){
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
-        cell1.innerHTML = `<a target="_blank" title="Ver projeto no github" href="${element.url}">${element.name}</a>`;
+        cell1.innerHTML = `<a target="_blank" title="Ver projeto no github" rel="noopener" href="${element.url}">${element.name}</a>`;
         cell2.innerHTML = element.description;
         cell3.innerHTML = element.language;
         cell3.className = "d-none d-sm-block";
