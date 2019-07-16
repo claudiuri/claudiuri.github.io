@@ -3,22 +3,22 @@ var table = document.getElementById('myTable');
 
 if(localStorage.getItem('projects') == null){
     $.get('https://api.github.com/users/claudiuri/repos', (data) => {
-    
+
         data.forEach(element => {
             let project = { name: element.name, description:  element.description, language: element.language, url: element.html_url}
             projects.push(project);
         });
-        
+
         projects = projects.filter(element => {
             return element.description != null;
         });
-        
+
         localStorage.setItem('projects', JSON.stringify(projects));
-        
-        insertProjectsInTable(projects);       
+
+        insertProjectsInTable(projects);
     });
 }else{
-    
+
     projects = JSON.parse(localStorage.getItem('projects'));
     insertProjectsInTable(projects);
 }
@@ -41,12 +41,11 @@ $("#sendMessageButton").click(function (){
 
     var spinner = $('.loading-spinner');
 
-    spinner.addClass('active'); 
+    spinner.addClass('active');
 
-    var $form = $( this ),
-      name = $form.find( "input[name='name']" ).val(),
-      email = $form.find( "input[name='email']" ).val(),
-      message = $form.find( "input[name='message']" ).val();
+    var name = $('#name').val();
+    var email = $('#email').val();
+    var message = $('#message').val();
 
     $.ajax({
         url : "https://sen-mail.herokuapp.com/",
@@ -57,13 +56,13 @@ $("#sendMessageButton").click(function (){
         message: message
         },
         success: function(data) {
-            spinner.removeClass('active'); 
+            spinner.removeClass('active');
             alert(data);
         },
         error: function(error) {
-            spinner.removeClass('active'); 
+            spinner.removeClass('active');
             alert(error);
         },
     });
-   
+
 });
