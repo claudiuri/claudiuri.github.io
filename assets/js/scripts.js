@@ -36,3 +36,34 @@ function insertProjectsInTable(projects){
     });
 }
 
+$("#sendMessageButton").click(function (){
+    event.preventDefault();
+
+    var spinner = $('.loading-spinner');
+
+    spinner.addClass('active'); 
+
+    var $form = $( this ),
+      name = $form.find( "input[name='name']" ).val(),
+      email = $form.find( "input[name='email']" ).val(),
+      message = $form.find( "input[name='message']" ).val();
+
+    $.ajax({
+        url : "https://sen-mail.herokuapp.com/",
+        type : 'post',
+        data : {
+        name : name,
+        email : email,
+        message: message
+        },
+        success: function(data) {
+            spinner.removeClass('active'); 
+            alert(data);
+        },
+        error: function(error) {
+            spinner.removeClass('active'); 
+            alert(error);
+        },
+    });
+   
+});
