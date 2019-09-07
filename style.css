@@ -85,13 +85,6 @@ body {
     color: #FFF;
 }
 
-.social li:hover {
-    transform: scale(1.2);
-    transition-duration: 0.5s;
-    box-shadow:0px 13px 50px #BF9999;
-    cursor: pointer;
-}
-
 @media (max-width: 600px) {
     .social {
         margin-top: 23px;
@@ -99,5 +92,14 @@ body {
 
     .about {
         margin: 23px 5px auto 5px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .social li:hover {
+        transform: scale(1.2);
+        transition-duration: 0.5s;
+        box-shadow:0px 13px 50px #BF9999;
+        cursor: pointer;
     }
 }
