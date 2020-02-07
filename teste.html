@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#BF9999">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <meta name="description" content="Portifólio de Cláudio Yuri, Desenvolvedor que reside em Salvador, Bahia">
+        <menu name="author" content="Cláudio Yuri Brandão Ferreira"></menu>
+        <meta name="robots" content="index, follow">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="canonical" href="https://claudiuri.com">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+
+        <title>claudiuri - web developer</title>
+    </head>
+    <body>
+
+        <main>
+            <div class="main">
+                <input type="file" accept="image/*" capture="camera" id="camera">
+                <img id="frame">
+            </div>
+        </main>
+        <script>
+            var camera = document.getElementById('camera');
+            var frame = document.getElementById('frame');
+          
+            camera.addEventListener('change', function(e) {
+              var file = e.target.files[0]; 
+              // Do something with the image file.
+              frame.src = URL.createObjectURL(file);
+            });
+          </script>
+    </body>
+</html>
