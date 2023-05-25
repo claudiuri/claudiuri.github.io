@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medição do Centro Ótico</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+</head>
+<body>
+    <h1>Medição do Centro Ótico</h1>
+    <input type="file" id="inputImage" accept="image/*" onchange="processImage()" />
+    <canvas id="canvas"></canvas>
+
+    <script>
+        // Função para processar a imagem selecionada
+        async function processImage() {
+            const input = document.getElementById('inputImage');
+            const canvas = document.getElementById('canvas');
+            const context = canvas.getContext('2d');
+            
+            // Carrega o modelo de detecção de face e olhos
+            await faceapi.loadSsdMobilenetv1Model('https://cdn.jsdelivr.net/npm/face-api.js/models/ssd_mobilenetv1.js');
+            await faceapi.loadFaceLandmarkModel('https://cdn.jsdelivr.net/npm/face-api.js/models/face_landmark_68_model.js');
+
+            // Carrega a imagem selecionada
+            const image = await faceapi.bufferToImage(input.files[0]);
+            
+            // Redimensiona o canvas para a largura e altura da imagem
+            canvas.width = image.width;
+            canvas.height = image.height;
+            
+            // Desenha a imagem no canvas
+            context.drawImage(image, 0, 0);
+            
+            // Detecta os rostos na imagem
+            const detections = await faceapi.detectAllFaces(canvas).withFaceLandmarks();
+
+            // Verifica se foram encontrados rostos
+            if (detections.length > 0) {
+                // Obtém as coordenadas dos olhos do primeiro rosto detectado
+                const leftEye = detections[0].landmarks.getLeftEye()[4];
+                const rightEye = detections[0].landmarks.getRightEye()[0];
+                
+                // Calcula o centro ótico
+                const opticalCenterX = (leftEye.x + rightEye.x) / 2;
+                const opticalCenterY = (leftEye.y + rightEye.y) / 2;
+
+                // Desenha um círculo vermelho no centro ótico
+                context.beginPath();
+                context.arc(opticalCenterX, opticalCenterY, 5, 0, 2 * Math.PI, false);
+                context.fillStyle = 'red';
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = '#ffffff';
+                context.stroke();
+            }
+        }
+    </script>
+</body>
+</html>
